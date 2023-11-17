@@ -53,7 +53,26 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void c_push(stack_t **stack, unsigned int n);
+void c_push(stack_t **head, unsigned int counter);
 void c_pall(stack_t **head, unsigned int counter);
+void c_mod(stack_t **head, unsigned int counter);
+void c_div(stack_t **head, unsigned int counter);
+void c_pstr(stack_t **head, unsigned int counter);
+void c_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void c_add(stack_t **head, unsigned int counter);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void c_pchar(stack_t **head, unsigned int counter);
+void c_stack(stack_t **head, unsigned int counter);
+void addnode(stack_t **head, int n);
+void free_stack(stack_t *head);
+void c_mul(stack_t **head, unsigned int counter);
+void c_pint(stack_t **head, unsigned int counter);
+void addqueue(stack_t **head, int n);
+void c_sub(stack_t **head, unsigned int counter);
+void c_pop(stack_t **head, unsigned int counter);
+void c_queue(stack_t **head, unsigned int counter);
+void c_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter);
+void c_swap(stack_t **head, unsigned int counter);
+void c_nop(stack_t **head, unsigned int counter);
 
 #endif
