@@ -7,7 +7,6 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -53,6 +52,9 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
+ssize_t getstdin(char **lineptr, int file);
+char  *clean_line(char *content);
 void c_push(stack_t **head, unsigned int counter);
 void c_pall(stack_t **head, unsigned int counter);
 void c_mod(stack_t **head, unsigned int counter);
